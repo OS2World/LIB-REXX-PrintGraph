@@ -1,0 +1,28 @@
+; *********************************************************************
+; 
+;  $Author:   KANIS  $
+;  $Workfile:   PRTGRCPP.DEF  $
+;  $Revision:   1.0  $
+;  $Date:   04 May 1996 21:10:34  $
+; 
+;  $Log:   M:\prtgraph\prtgrcpp.dev  $
+; 
+;    Rev 1.0   04 May 1996 21:10:34   KANIS
+; First VCS store for v2.2
+;  
+; *********************************************************************
+
+LIBRARY PRTGRCPP INITINSTANCE TERMINSTANCE
+PROTMODE
+
+DESCRIPTION     'V2.0 prtgrcpp.dll (c) Copyright 1995 ADD Consulting'
+DATA            LOADONCALL MULTIPLE NONSHARED
+EXPORTS
+
+; ***********************************************************************
+;
+;   (c)1996 ADD Consulting
+;
+;   END OF FILE.
+;
+; ***********************************************************************

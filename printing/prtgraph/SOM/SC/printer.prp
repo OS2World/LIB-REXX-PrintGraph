@@ -1,0 +1,529 @@
+#ifndef VRPrinter_PRP_INCLUDED
+#define VRPrinter_PRP_INCLUDED
+
+const VRPROPENTRY VRPrinterPropertyList[] =
+  {
+    {
+      "LeftMargin",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "RightMargin",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "TopMargin",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "BottomMargin",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "PageWidth",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "PageHeight",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "Printing",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditBoolean",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_BOOLEAN,
+      0          /* saveable */
+    },
+    {
+      "CurrentPrinter",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      0          /* saveable */
+    },
+    {
+      "CurrentDevice",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      0          /* saveable */
+    },
+    {
+      "LineSpace",  /* name */
+      0,      /* create time */
+      0,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "Version",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      0          /* saveable */
+    },
+    {
+      "PrintColor",  /* name */
+      1,      /* create time */
+      0,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "Color",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditColor",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      1          /* saveable */
+    },
+    {
+      "ColorEnabled",  /* name */
+      1,      /* create time */
+      0,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "Color",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditBoolean",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_BOOLEAN,
+      1          /* saveable */
+    },
+    {
+      "Measures",  /* name */
+      1,      /* create time */
+      0,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "Style",  /* edit group */
+      ";Metric;Inches",  /* editHint (enum value) */
+      "VREditEnum",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      1          /* saveable */
+    },
+    {
+      "PageNum",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "JobName",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      0          /* saveable */
+    },
+    {
+      "DefaultPrinter",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      0          /* saveable */
+    },
+    {
+      "MinLeftMar",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "MinRightMar",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "MinTopMar",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "MinBottomMar",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "FormName",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      0          /* saveable */
+    },
+    {
+      "FormWidth",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "FormHeight",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "WordBreak",  /* name */
+      0,      /* create time */
+      0,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_BOOLEAN,
+      0          /* saveable */
+    },
+    {
+      "ShowProgress",  /* name */
+      0,      /* create time */
+      0,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "Style",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditBoolean",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_BOOLEAN,
+      1          /* saveable */
+    },
+    {
+      "XPos",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "YPos",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "XposTwips",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      "YposTwips",  /* name */
+      0,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditString",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_WHOLE,
+      0          /* saveable */
+    },
+    {
+      NULL,       /* name */
+      FALSE,      /* create_time */
+      FALSE,      /* read_only */
+      FALSE,      /* hidden */
+      FALSE,      /* optimizable */
+      NULL,       /* description */
+      NULL,       /* group */
+      NULL,       /* edit_group */
+      NULL,       /* edit_hint */
+      NULL,       /* editRtn */
+      NULL,       /* editGroupCaption */
+      0,          /* type */
+      0           /* isSaveable */
+    }
+  };
+
+const VRMETHENTRY VRPrinterMethodList[] =
+  {
+    { "ClosePrintJob" }, 
+    { "DefineTable" }, 
+    { "EndRow" }, 
+    { "EndTable" }, 
+    { "GoTo" }, 
+    { "JobProperties" }, 
+    { "PrintJustified" }, 
+    { "PrintCentered" }, 
+    { "PrintRight" }, 
+    { "PrintLeft" }, 
+    { "PrintLine" }, 
+    { "PrintBox" }, 
+    { "PrintBitmap" }, 
+    { "PrintFile" }, 
+    { "StartCol" }, 
+    { "StartRow" }, 
+    { "StartTable" }, 
+    { "SetHeader" }, 
+    { "SetHeaderMode" }, 
+    { "SetFooter" }, 
+    { "SetMargins" }, 
+    { "SetPrinter" }, 
+    { "PrinterDialog" }, 
+    { "FontDialog" }, 
+    { "OpenPrintJob" }, 
+    { "NewPage" }, 
+    { "PrinterList" }, 
+    { "Tab" }, 
+    { "SetHeaderLineFont" }, 
+    { "PrintObjectImage" }, 
+    { "ResetColHeader" }, 
+    { "ResetHeader" }, 
+    { "AbortPrintJob" }, 
+    { "BlockFits" }, 
+    { "LineFits" }, 
+    { "SetProgressTexts" }, 
+    { "MoveX" }, 
+    { "MoveY" }, 
+    { "PrintWinImage" }, 
+    { "LoadResMod" }, 
+    { "FreeResMod" }, 
+    { "PrintJPEG" }, 
+    { "StringLength" }, 
+    { "GotoX" }, 
+    { "GotoY" }, 
+    { "GotoTab" }, 
+    { "DrawLine" }, 
+    { "PrintBullet" }, 
+    { "SaveJobProps" }, 
+    { "ReadJobProps" }, 
+    { NULL }
+  };
+
+#endif
+

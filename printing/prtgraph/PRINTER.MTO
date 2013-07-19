@@ -1,0 +1,120 @@
+Methods;Invoke help;InvokeHelp;NoParms
+Methods;List methods;ListMethods;ListMeth
+Methods;List properties;ListProperties;ListProp
+Methods;Post an event;PostEvent;PostEvnt
+Methods;Set focus;SetFocus;NoParms
+Methods;Printer selection dialog;PrinterDialog;VRPrPDlg
+Methods;Font selection dialog;FontDialog_Title_Face_font;meth2p
+Methods;Job properties dialog;JobProperties;NoParms
+Methods;Get list of printers;PrinterList_Stem_ok;meth1p
+Methods;Set the current printer;SetPrinter_Index_ok;meth1p
+Methods;Set the header;SetHeader;VRPrHdr
+Methods;Set the header mode;SetHeaderMode;VRPrHmde
+Methods;Set the footer;SetFooter;VRPrFtr
+Methods;Set page margins;SetMargins;VRPrMarg
+Methods;Open print job;OpenPrintJob_Document_ok;meth1p
+Methods;Close print job;ClosePrintJob;NoParms
+Methods;Abort print job;AbortPrintJob;NoParms
+Methods;Print text;PrintLeft;VRPrPrt
+Methods;Print text with line feed;PrintLine;VRPrPrt
+Methods;Print text right aligned;PrintRight;VRPrPrt
+Methods;Print text justified;PrintJustified;VRPrPrt
+Methods;Print text centered;PrintCentered;VRPrPrt
+Methods;Print a box;PrintBox;VRPrMarg
+Methods;Print a bitmap;PrintBitMap;VRPrImg
+Methods;Print JPEG;PrintJPEG;VRPrImg
+Methods;Print Window Image;PrintWinImage;VRPrImg
+Methods;Print Object Image;PrintObjectImage;VRPrImg
+Methods;Print a text file;PrintFile;VRPrFile
+Methods;Define a table;DefineTable;VRPrTbl2
+Methods;Start a table;StartTable;VRPrTbl
+Methods;Start a new column;StartCol_Col Nø_ok;meth1p
+Methods;Start a new row;StartRow;NoParms
+Methods;End a row;EndRow;NoParms
+Methods;End a table;Endtable;NoParms
+Methods;Set cursor position;Goto_X pos_Y pos_ok;meth2p
+Methods;Move cursor (X);MoveX_X rel_ok;meth1p
+Methods;Move cursor (Y);MoveX_Y rel_ok;meth1p
+Methods;Move to next tab pos;Tab;NoParms
+Methods;New page;NewPage;NoParms
+Methods;Check if block fits;BlockFits;VRPrPrt
+Methods;Check if line fits;LineFits;VRPrPrt
+Methods;Change the header;ResetHeader;VRPrHdr
+Methods;Set progress dialog texts;SetProgressTexts;VRPrPTxt
+Get property;AutoSize;AutoSize;Getval
+Get property;BackColor;BackColor;GetVal
+Get property;BottomMargin;BottomMargin;Getval
+Get property;Caption;Caption;GetVal
+Get property;ClassName;ClassName;GetVal
+Get property;ClipSiblings;ClipSiblings;GetVal
+Get property;ColorEnabled;ColorEnabled;GetVal
+Get property;CurrentPrinter;CurrentPrinter;GetVal
+Get property;DefaultPrinter;DefaultPrinter;GetVal
+Get property;Enabled;Enabled;GetVal
+Get property;FirstChild;FirstChild;GetVal
+Get property;Font;Font;GetVal
+Get property;ForeColor;ForeColor;GetVal
+Get property;FormHeight;FormHeight;GetVal
+Get property;FormName;FormName;GetVal
+Get property;FormWidth;FormWidth;GetVal
+Get property;Height;Height;GetVal
+Get property;HelpTag;HelpTag;GetVal
+Get property;HelpText;HelpText;GetVal
+Get property;HintText;HintText;GetVal
+Get property;HWnd;HWnd;GetVal
+Get property;JobName;JobName;GetVal
+Get property;Left;Left;GetVal
+Get property;LeftMargin;LeftMargin;Getval
+Get property;LineSpace;LineSpace;Getval
+Get property;MinBottomMar;MinBottomMar;GetVal
+Get property;MinLeftMar;MinLeftMar;GetVal
+Get property;MinRightMar;MinRightMar;GetVal
+Get property;MinTopMar;MinTopMar;GetVal
+Get property;Name;Name;GetVal
+Get property;Painting;Painting;GetVal
+Get property;Parent;Parent;GetVal
+Get property;PageHeight;PageHeight;GetVal
+Get property;PageNum;PageNum;GetVal
+Get property;PageWidth;PageWidth;GetVal
+Get property;Painting;Painting;GetVal
+Get property;PrintColor;PrintColor;GetVal
+Get property;Printing;Printing;GetVal
+Get property;RightMargin;RightMargin;Getval
+Get property;Self;Self;GetVal
+Get property;ShowProgress;ShowProgress;GetVal
+Get property;Sibling;Sibling;GetVal
+Get property;SiblingOrder;SiblingOrder;GetVal
+Get property;TabIndex;TabIndex;GetVal
+Get property;Top;Top;GetVal
+Get property;TopMargin;TopMargin;Getval
+Get property;UserData;UserData;GetVal
+Get property;Version;Version;GetVal
+Get property;Visible;Visible;GetVal
+Get property;Width;Width;GetVal
+Get property;WordBreak;WordBreak;GetVal
+Set property;AutoSize;AutoSize;TFProps
+Set property;BackColor;BackColor;ColProps
+Set property;Caption;Caption;StrProps
+Set property;ClipSiblings;ClipSiblings;TFProps
+Set property;ColorEnabled;ColorEnabled;TFProps
+Set property;Enabled;Enabled;TFProps
+Set property;Enabled;Enabled;TFProps
+Set property;Font;Font;Font
+Set property;ForeColor;ForeColor;ColProps
+Set property;Height;Height;NumProps
+Set property;HelpTag;HelpTag;NumProps
+Set property;HelpText;HelpText;StrProps
+Set property;HintText;HintText;StrProps
+Set property;Left;Left;NumProps
+Set property;LineSpace;LineSpace;VRPrSpc
+Set property;Name;Name;StrProps
+Set property;Painting;Painting;TFProps
+Set property;PrintColor;PrintColor;StrProps
+Set property;SiblingOrder;SiblingOrder;NumProps
+Set property;ShowProgress;ShowProgress;TFProps
+Set property;TabIndex;TabIndex;NumProps
+Set property;Top;Top;NumProps
+Set property;UserData;UserData;StrProps
+Set property;Visible;Visible;TFProps
+Set property;Width;Width;NumProps
+Set property;WordBreak;WordBreak;TFProps

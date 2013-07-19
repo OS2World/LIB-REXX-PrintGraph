@@ -1,0 +1,4 @@
+	sc -r -s 64000 -s "h;sc;ih;c" printer.csc
+	vxgetrel printer.sc ..\printer.rel
+	vxprepc printer.c 
+SOM class files are up-to-date.

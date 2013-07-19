@@ -1,0 +1,110 @@
+// *********************************************************************
+//
+// $Author:   KANIS  $
+// $Workfile:   DIALOG.DLG  $
+// $Revision:   1.0  $
+// $Date:   04 May 1996 21:11:06  $
+//
+// $Log:   M:\prtgraph\dialog.dlv  $
+// 
+//    Rev 1.0   04 May 1996 21:11:06   KANIS
+// First VCS store for v2.2
+// 
+// *********************************************************************
+
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+DLGINCLUDE 1 "dialog.h"
+
+DLGTEMPLATE DEMO_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", DEMO_DLG, 41, 30, 264, 188, FS_SCREENALIGN | WS_VISIBLE, 
+            FCF_SYSMENU | FCF_TITLEBAR | FCF_MINBUTTON
+    BEGIN
+        GROUPBOX        "Header", 207, 5, 128, 82, 48, NOT WS_GROUP
+        SPINBUTTON      SPIN_HW, 53, 156, 28, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+        SPINBUTTON      SPIN_HS, 54, 143, 27, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+        RTEXT           "Width", 203, 25, 157, 23, 11, DT_VCENTER | NOT 
+                        WS_GROUP
+        RTEXT           "Style", 204, 25, 143, 23, 11, DT_VCENTER | NOT 
+                        WS_GROUP
+        AUTOCHECKBOX    "", CB_HEADER, 10, 151, 11, 10
+        AUTOCHECKBOX    "All pages", CB_ALLPAGES, 10, 131, 59, 10
+        GROUPBOX        "Footer", 214, 92, 137, 80, 39
+        SPINBUTTON      SPIN_FW, 138, 154, 29, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+        SPINBUTTON      SPIN_FS, 138, 141, 29, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+        RTEXT           "Width", 210, 111, 155, 23, 11, DT_VCENTER | NOT 
+                        WS_GROUP
+        RTEXT           "Style", 211, 111, 141, 23, 11, DT_VCENTER | NOT 
+                        WS_GROUP
+        AUTOCHECKBOX    "", CB_FOOTER, 98, 149, 11, 10
+        GROUPBOX        "Page border", 213, 177, 137, 80, 39
+        SPINBUTTON      SPIN_BW, 223, 154, 29, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+        SPINBUTTON      SPIN_BS, 223, 141, 29, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+        RTEXT           "Width", 217, 196, 155, 23, 11, DT_VCENTER | NOT 
+                        WS_GROUP
+        RTEXT           "Style", 218, 196, 141, 23, 11, DT_VCENTER | NOT 
+                        WS_GROUP
+        AUTOCHECKBOX    "", CB_BORDER, 182, 149, 11, 10
+        RTEXT           "Inter line spacing", 221, 89, 122, 79, 10, 
+                        DT_VCENTER
+        SPINBUTTON      SPIN_INTERL, 171, 121, 41, 12, SPBS_READONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+        LTEXT           "% Pt size", 222, 217, 122, 42, 10, DT_VCENTER | NOT 
+                        WS_GROUP
+        GROUPBOX        "Margins (mm)", 231, 5, 61, 83, 65
+        SPINBUTTON      SPIN_LM, 52, 104, 30, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+        SPINBUTTON      SPIN_RM, 52, 91, 30, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+        RTEXT           "Left", 225, 26, 105, 23, 11, DT_VCENTER | NOT 
+                        WS_GROUP
+        RTEXT           "Right", 226, 26, 91, 23, 11, DT_VCENTER | NOT 
+                        WS_GROUP
+        SPINBUTTON      SPIN_TM, 52, 78, 30, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+        SPINBUTTON      SPIN_BM, 52, 65, 30, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+        RTEXT           "Top", 229, 26, 79, 23, 11, DT_VCENTER | NOT 
+                        WS_GROUP
+        RTEXT           "Bottom", 230, 15, 65, 34, 11, DT_VCENTER | NOT 
+                        WS_GROUP
+        GROUPBOX        "What to print", 232, 96, 62, 165, 57
+        AUTORADIOBUTTON "Text left", RB_TEXTL, 103, 100, 68, 10, WS_TABSTOP
+        AUTORADIOBUTTON "Text right", RB_TEXTR, 103, 89, 66, 10, WS_TABSTOP
+        AUTORADIOBUTTON "Text centred", RB_TEXTC, 103, 78, 74, 10, 
+                        WS_TABSTOP
+        AUTORADIOBUTTON "Text justified", RB_TEXTJ, 103, 66, 74, 10, 
+                        WS_TABSTOP
+        AUTORADIOBUTTON "OS/2 bitmap", RB_BITMAP, 184, 101, 69, 10, 
+                        WS_TABSTOP
+        AUTORADIOBUTTON "Tables", RB_TABLES, 184, 90, 62, 10, WS_TABSTOP
+        AUTORADIOBUTTON "Box styles", RB_STYLES, 183, 78, 67, 10, WS_TABSTOP
+        AUTORADIOBUTTON "Tabbed text", RB_TABBED, 183, 66, 70, 10, 
+                        WS_TABSTOP
+        PUSHBUTTON      "~Font...", PB_FONT, 4, 46, 44, 13
+        ENTRYFIELD      "", EF_FONT, 58, 48, 199, 7, ES_MARGIN
+        PUSHBUTTON      "~Choose printer...", PB_PRINTER, 4, 31, 90, 13
+        PUSHBUTTON      "~Job properties...", PB_JOBPROPS, 168, 31, 91, 13
+        DEFPUSHBUTTON   "~Print", PB_PRINT, 5, 15, 60, 13
+        PUSHBUTTON      "~Quit", DID_CANCEL, 219, 15, 40, 13
+        GROUPBOX        "", 146, 1, 1, 262, 15, NOT WS_GROUP
+        LTEXT           "", ST_HINT, 4, 2, 256, 8, DT_VCENTER | NOT WS_GROUP
+        PUSHBUTTON      "~About...", PB_ABOUT, 103, 15, 57, 13
+    END
+END
+
+// ***********************************************************************
+//
+//  (c)1996 ADD Consulting
+//
+//  END OF FILE.
+//
+// ***********************************************************************

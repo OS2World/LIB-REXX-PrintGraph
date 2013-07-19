@@ -1,0 +1,119 @@
+; *********************************************************************
+; 
+;  $Author:   KANIS  $
+;  $Workfile:   PRTGRAPH.DEF  $
+;  $Revision:   1.0  $
+;  $Date:   04 May 1996 21:10:30  $
+; 
+;  $Log:   M:\prtgraph\prtgraph.dev  $
+; 
+;    Rev 1.0   04 May 1996 21:10:30   KANIS
+; First VCS store for v2.2
+;  
+; *********************************************************************
+
+LIBRARY PRTGRAPH INITINSTANCE TERMINSTANCE
+PROTMODE
+
+DESCRIPTION     'V2.2 prtgraph.dll (c) Copyright 1995, 1996 ADD Consulting'
+DATA            LOADONCALL MULTIPLE NONSHARED
+
+EXPORTS         
+        PRTGRXLOADFUNCS         = PrtGRxLoadFuncs
+        PRTGRXDROPFUNCS         = PrtGRxDropFuncs
+
+        PRTGRXINIT              = PrtGRxInit
+        PRTGRXTERM              = PrtGRxTerm
+
+        PRTGRXPRINTERLIST       = PrtGRxPrinterList
+        PRTGRXSETPRINTER        = PrtGRxSetPrinter
+
+        PRTGRXJOBPROPERTIES     = PrtGRxJobProperties
+        PRTGRXPRINTERDIALOG     = PrtGRxPrinterDialog
+        PRTGRXFONTDIALOG        = PrtGRxFontDialog
+
+        PRTGRXSETMARGINS        = PrtGRxSetMargins
+        PRTGRXSETHEADER         = PrtGRxSetHeader
+        PRTGRXSETHEADERMODE     = PrtGRxSetHeaderMode
+        PRTGRXSETHEADERLINEFONT = PrtGRxSetHeaderLineFont
+        PRTGRXSETFOOTER         = PrtGRxSetFooter
+        PRTGRXRESETCOLHEADER    = PrtGRxResetColHeader
+        PRTGRXRESETHEADER       = PrtGRxResetHeader
+
+        PRTGRXOPENPRINTJOB      = PrtGRxOpenPrintJob
+        PRTGRXCLOSEPRINTJOB     = PrtGRxClosePrintJob
+        PRTGRXABORTPRINTJOB     = PrtGRxAbortPrintJob
+
+        PRTGRXPRINTLINE         = PrtGRxPrintLine
+        PRTGRXPRINTLEFT         = PrtGRxPrintLeft
+        PRTGRXPRINTRIGHT        = PrtGRxPrintRight
+        PRTGRXPRINTCENTERED     = PrtGRxPrintCentered
+        PRTGRXPRINTJUSTIFIED    = PrtGRxPrintJustified
+
+        PRTGRXLINEFITS          = PrtGRxLineFits
+        PRTGRXBLOCKFITS         = PrtGRxBlockFits
+        PRTGRXSTRINGLENGTH      = PrtGRxStringLength
+
+        PRTGRXPRINTBOX          = PrtGRxPrintBox
+        PRTGRXDRAWLINE          = PrtGRxDrawLine
+        PRTGRXPRINTBITMAP       = PrtGRxPrintBitmap
+        PRTGRXPRINTJPEG         = PrtGRxPrintJPEG
+        PRTGRXPRINTFILE         = PrtGRxPrintFile
+        PRTGRXPRINTWINIMAGE     = PrtGRxPrintWinImage
+        
+        PRTGRXDEFINETABLE       = PrtGRxDefineTable
+        PRTGRXSTARTTABLE        = PrtGRxStartTable
+        PRTGRXSTARTROW          = PrtGRxStartRow
+        PRTGRXSTARTCOL          = PrtGRxStartCol
+        PRTGRXENDROW            = PrtGRxEndRow
+        PRTGRXENDTABLE          = PrtGRxEndTable
+
+        PRTGRXTAB               = PrtGRxTab
+        PRTGRXGOTOTAB           = PrtGRxGotoTab
+        PRTGRXGOTO              = PrtGRxGoTo
+        PRTGRXGOTOX             = PrtGRxGoToX
+        PRTGRXGOTOY             = PrtGRxGoToY
+        PRTGRXMOVEX             = PrtGRxMoveX
+        PRTGRXMOVEY             = PrtGRxMoveY
+        PRTGRXNEWPAGE           = PrtGRxNewPage
+
+        PRTGRXGET               = PrtGRxGet
+        PRTGRXSET               = PrtGRxSet
+        PRTGRXSETPROGRESSTEXTS  = PrtGRxSetProgressTexts
+        PRTGRXLOADRESMOD        = PrtGRxLoadResMod
+        PRTGRXFREERESMOD        = PrtGRxFreeResMod
+
+        PRTGRXPRINTBULLET       = PrtGRxPrintBullet
+
+        PRTGRXSAVEJOBPROPS      = PrtGRxSaveJobProps
+        PRTGRXREADJOBPROPS      = PrtGRxReadJobProps
+
+; ===========================================================
+; Old functions still supported
+; ===========================================================
+
+        PRTGRXSETHDRLINEFONT    = PrtGRxSetHeaderLineFont
+        PRTGRXWRITELN           = PrtGRxPrintLine
+        PRTGRXWRITE             = PrtGRxPrintLeft
+        PRTGRXJUSTRIGHT         = PrtGRxPrintRight
+        PRTGRXCENTRE            = PrtGRxPrintCentered
+        PRTGRXJUSTIFIED         = PrtGRxPrintJustified
+        PRTGRXBOX               = PrtGRxPrintBox
+        PRTGRXBITMAP            = PrtGRxPrintBitmap
+        PRTGRXJOBPROPS          = PrtGRxJobProperties
+        PRTGRXPRINTERDLG        = PrtGRxPrinterDialog
+        PRTGRXFONTDLG           = PrtGRxFontDialog
+
+        PRTGRXVERSION           = PrtGRxVersion
+        PRTGRXSETLINESPACE      = PrtGRxSetLineSpace
+        PRTGRXCURRENTPRINTER    = PrtGRxCurrentPrinter
+        PRTGRXCURRENTDEVICE     = PrtGRxCurrentDevice
+        PRTGRXGETPAGESIZE       = PrtGRxGetPageSize
+
+; ***********************************************************************
+;
+;   (c)1996 ADD Consulting
+;
+;   END OF FILE.
+;
+; ***********************************************************************

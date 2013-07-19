@@ -1,0 +1,28 @@
+; *********************************************************************
+; 
+;  $Author:   KANIS  $
+;  $Workfile:   PRTRXDAE.DEF  $
+;  $Revision:   1.0  $
+;  $Date:   04 May 1996 21:10:38  $
+; 
+;  $Log:   M:\prtgraph\prtrxdae.dev  $
+; 
+;    Rev 1.0   04 May 1996 21:10:38   KANIS
+; First VCS store for v2.2
+;  
+; *********************************************************************
+
+NAME            PRTRXDAE   WINDOWAPI NEWFILES
+
+DESCRIPTION     'PM Daemon for PRTGRAPH DLL by Peter J. Kanis (c)1995 ADD Consulting'
+PROTMODE
+HEAPSIZE        16384
+STACKSIZE       0x30000
+
+; ***********************************************************************
+;
+;   (c)1996 ADD Consulting
+;
+;   END OF FILE.
+;
+; ***********************************************************************

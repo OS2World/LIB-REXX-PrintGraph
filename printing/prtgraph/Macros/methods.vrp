@@ -1,0 +1,26 @@
+VX-REXX OS/2 V2.14 Build B3
+VRX: meth1p.VRX
+VRX: meth2p.VRX
+VRX: VRPrTbl2.VRX
+VRX: VRPrPTxt.VRX
+VRX: VRPrPDlg.VRX
+VRX: VRPrTbl.VRX
+VRX: VRPrHdr.VRX
+VRX: VRPrFtr.VRX
+VRX: VRPrHmde.VRX
+VRX: VRPrSpc.VRX
+VRX: VRPrMarg.VRX
+VRX: VRPrImg.VRX
+VRX: VRPrPrt.VRX
+VRX: VRPrFile.VRX
+MacroPath: VRM:D:\prtgraph\macros\Macros
+EXEPath: 
+RunParameters: 
+RunDirectory: D:\prtgraph\macros\Meth1P
+VRXWindow: __VREMainWindow,1,1144,2168,5770,7998
+VRXWindow: __VREFileListWindow,1,5950,1012,3204,3358
+VRXWindow: __VRESectionListWindow,1,1686,8817,4902,2541
+VRXWindow: __VREToolsWindow,1,867,337,5498,1669
+VRXWindow: __VREWindListWindow,1,6324,5155,2650,3150
+UserFile: 5
+UserWindow: VRPrPDlg,1

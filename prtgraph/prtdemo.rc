@@ -1,0 +1,89 @@
+// *********************************************************************
+//
+// $Author:   KANIS  $
+// $Workfile:   PRTDEMO.RC  $
+// $Revision:   1.0  $
+// $Date:   04 May 1996 21:10:52  $
+//
+// $Log:   M:\prtgraph\prtdemo.rcv  $
+// 
+//    Rev 1.0   04 May 1996 21:10:52   KANIS
+// First VCS store for v2.2
+// 
+// *********************************************************************
+
+#define     INCL_WIN
+#include    <os2.h>
+#include    "prtdemo.h"
+
+ICON DEMO_DLG PRTMAN.ICO
+
+MENU DEMO_DLG
+
+BEGIN
+    SUBMENU             "~File",                500
+        BEGIN
+            MENUITEM    "~Set printer...\tF4",  PB_PRINTER
+            MENUITEM    SEPARATOR
+            MENUITEM    "E~xit\tF3",            DID_CANCEL
+        END
+    
+    SUBMENU             "~Help",                501
+        BEGIN
+            MENUITEM    "~About...",            PB_ABOUT
+        END
+END
+
+ACCELTABLE DEMO_DLG
+
+BEGIN
+  VK_F3,    DID_CANCEL,         VIRTUALKEY
+  VK_F4,    PB_PRINTER,         VIRTUALKEY
+END
+
+RCINCLUDE "DIALOG.DLG"
+
+/************************************************************************/
+/* Hint texts for dialog.                                               */
+/************************************************************************/
+
+STRINGTABLE LOADONCALL DISCARDABLE
+
+    BEGIN
+        SPIN_HW_TXT                     "Line thickness for header in TWIPS"
+        SPIN_HS_TXT                     "Fill style for header"
+        CB_HEADER_TXT                   "Print a header"
+        CB_ALLPAGES_TXT                 "Print the header on every page"
+        SPIN_FW_TXT                     "Line thickness for footer in TWIPS"
+        SPIN_FS_TXT                     "Fill style for footer"
+        CB_FOOTER_TXT                   "Print a footer"
+        SPIN_BW_TXT                     "Line width for page border in TWIPS"
+        SPIN_BS_TXT                     "Fill style for page"
+        CB_BORDER_TXT                   "Print a border around the page"
+        SPIN_INTERL_TXT                 "Interline spacing fr text printing"
+        SPIN_LM_TXT                     "Left margin in millimetres"
+        SPIN_RM_TXT                     "Right margin in millimetres"
+        SPIN_TM_TXT                     "Top margin in millimetres"
+        SPIN_BM_TXT                     "Bottom margin in millimetres"
+        RB_TEXTL_TXT                    "Print text justified on left margin"
+        RB_TEXTR_TXT                    "Print text justified on right margin"
+        RB_TEXTC_TXT                    "Print text centred between margins"
+        RB_TEXTJ_TXT                    "Print text justified"
+        RB_BITMAP_TXT                   "Print the OS/2 bitmap"
+        RB_TABLES_TXT                   "Print some table examples"
+        RB_STYLES_TXT                   "Print boxes with the available fill styles"
+        RB_TABBED_TXT                   "Print example with tabs and moving"
+        PB_FONT_TXT                     "Choose the font for headers and text"
+        EF_FONT_TXT                     "Current font"
+        PB_PRINTER_TXT                  "Select a printer"
+        PB_JOBPROPS_TXT                 "See the job properties for the current printer"
+        PB_PRINT_TXT                    "PRINT IT !!!"
+    END
+
+// ***********************************************************************
+//
+//  (c)1996 ADD Consulting
+//
+//  END OF FILE.
+//
+// ***********************************************************************

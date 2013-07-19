@@ -1,0 +1,20 @@
+VX-REXX OS/2 V2.14 Build B3
+VRX: topwin.VRX
+VXOFile: VRPRINT
+MacroPath: VRM:t:\VXODK\Projects\VRprint\demo
+EXEPath: 
+RunParameters: 
+RunDirectory: 
+VRXWindow: __VREMainWindow,1,1048,1879,5902,7998
+VRXWindow: __VREFileListWindow,1,6227,9491,2665,2674
+VRXWindow: __VRESectionListWindow,1,1518,9491,4457,2686
+VRXWindow: __VREToolsWindow,1,1108,145,5466,1667
+VRXWindow: __VREWindListWindow,1,6203,48,3023,3150
+UserFile: 1
+UserWindow: Window1,1
+UserWindow: Page_dlg,1
+UserWindow: Print_dlg,1
+UserWindow: hdr_ftr_dlg,1
+UserWindow: front_page,1
+UserWindow: ftr_dlg,1
+UserWindow: table_dlg,1

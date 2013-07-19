@@ -1,0 +1,73 @@
+PrtGraph for C/C++ v2.1  Graphics Mode Printing library for C/C++
+
+The VRPrinter object for C/C++ gives you access to complex graphic printing functionality under C/C++. You can print images, boxes, justified, right or left aligned or centered  text, tables with or without running headers and define page headers and  footers.
+
+Fuller description in PRTGRAPH.TXT.
+
+The PrtGraph for C/C++ library is shareware and can be registered through the Shareware Registration database 
+
+******************************* Keys ********************
+
+C/C++ PRINTING LIBRARY
+
+******************************* Text file ***************
+
+PrtGraph for C/C++ v2.1 Graphics Mode Printing library for C/C++; text description.
+
+
+******************************* Macros ******************
+
+Upgrade for the Drag-drop programming macros for VRPrinter v2.1. This file is destined for registered users of VRPrinter.
+
+******************************* Help ********************
+
+Upgrade for the on-line programming reference for PrtGraph for C/C++ v2.1. This file is destined for registered users of PrtGraph for C/C++.
+
+******************************* project ********************
+
+Upgrade example project files for PrtGraph for C/C++ v2.1. This file is destined for registered users of PrtGraph for C/C++.
+
+************************** Forum Message *******************
+
+New versions of ADD Consulting's printing libraries have been uploaded today to the OS/2 Shareware library.
+
+PrtGraph Library for C PRTGRAFC.ZIP
+PrtGraph Library for REXX PRTGRAPH.ZIP
+VRPrinter Object for VX-REXX VRPRT21.ZIP
+
+New support files for registered owners of VRPrinter have also been uploaded:
+
+    VRPROJ21.ZIP with new demo program and code
+    VRPMAC21.ZIP with new drag-drop programming macros
+    VRPINF21.ZIP with the new on-line help
+
+New support files for registered owners of PrtGraph for REXX have also been uploaded:
+
+    PRTRXDEM.ZIP with new demo program and code
+    PRTRXINF.ZIP with the new on-line help
+
+New support files for registered owners of PrtGraph for C have also been uploaded:
+
+    PRTCDEM.ZIP with new demo program and code
+    PRTCINF.ZIP with the new on-line help
+
+Try it out and enjoy.....
+
+Peter Kanis
+ADD Consulting (CH) OS/2, Client/Server and LAN Solutions
+
+******************* Reg users message VRPrint ***********************
+
+Dear client,
+
+Today you have received the latest upgrade of the VRPrinter object. 
+
+Support for all ADD Consulting products is available in the OS/2 Other Vendors Forum (GO OS2AVEN) section 1 (Other Vendors) or through the OS/2 Shareware Forum (GO OS2SHARE). All new support files other than the DLL will be uploaded to Library 1 on the OS/2 Shareware Forum.
+
+If you could please direct any questions, bug reports or wish lists to these forums, they will be answered as fast as possible and the many other registered users of the product can also benefit from your comments and experiences.
+
+Regards
+
+Peter Kanis
+ADD Consulting (CH) OS/2, Client/Server and LAN Solutions
+

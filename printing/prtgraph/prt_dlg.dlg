@@ -1,0 +1,67 @@
+// *********************************************************************
+//
+// $Author:   KANIS  $
+// $Workfile:   PRT_DLG.DLG  $
+// $Revision:   1.0  $
+// $Date:   04 May 1996 21:11:08  $
+//
+// $Log:   M:\prtgraph\prt_dlg.dlv  $
+// 
+//    Rev 1.0   04 May 1996 21:11:08   KANIS
+// First VCS store for v2.2
+// 
+// *********************************************************************
+
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+DLGINCLUDE 1 "PRT_DLG.H"
+
+DLGTEMPLATE PRT_DLG_PRINTERS LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", PRT_DLG_PRINTERS, 0, 0, 178, 106, FS_MOUSEALIGN | WS_VISIBLE, 
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        LISTBOX         PRT_DLG_PRT_LST, 6, 37, 166, 67, LS_HORZSCROLL
+        DEFPUSHBUTTON   "~OK", DID_OK, 5, 3, 49, 14
+        PUSHBUTTON      "~Cancel", DID_CANCEL, 109, 3, 64, 14
+        PUSHBUTTON      "~Job properties...", PRT_DLG_PROPS, 5, 20, 92, 14
+    END
+END
+
+DLGTEMPLATE PRT_DLG_PROGRESS LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Printing - Progress", PRT_DLG_PROGRESS, 35, 13, 160, 53, 
+            WS_VISIBLE, FCF_TITLEBAR
+    BEGIN
+        CTEXT           "<document name>", PRT_PROG_TEXT1, 6, 39, 149, 10, 
+                        DT_WORDBREAK
+        DEFPUSHBUTTON   "~Abort", PRT_PROG_ABORT, 8, 1, 146, 14
+        CTEXT           "<page>", PRT_PROG_TEXT2, 6, 28, 149, 10, 
+                        DT_WORDBREAK
+        CTEXT           "<printer>", PRT_PROG_TEXT3, 6, 17, 149, 10, 
+                        DT_WORDBREAK
+    END
+END
+
+DLGTEMPLATE PRT_DLG_PROGRESS1 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Printing - Progress", PRT_DLG_PROGRESS1, 35, 26, 160, 40, 
+            WS_VISIBLE, FCF_TITLEBAR
+    BEGIN
+        CTEXT           "<document name>", PRT_PROG_TEXT1, 6, 26, 149, 10, 
+                        DT_WORDBREAK
+        CTEXT           "<page>", PRT_PROG_TEXT2, 6, 15, 149, 10, 
+                        DT_WORDBREAK
+        CTEXT           "<printer>", PRT_PROG_TEXT3, 6, 4, 149, 10, 
+                        DT_WORDBREAK
+    END
+END
+
+// ***********************************************************************
+//
+//  (c)1996 ADD Consulting
+//
+//  END OF FILE.
+//
+// ***********************************************************************

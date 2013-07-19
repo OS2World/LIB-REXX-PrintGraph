@@ -1,0 +1,6 @@
+#include    "PRT_DLG.H"
+
+ICON 1 VRPRINT.ico
+ICON 100 printer.ICO
+
+RCINCLUDE "PRT_DLG.DLG"

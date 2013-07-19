@@ -1,0 +1,42 @@
+        VRPrinter v2.1     Graphics Mode Printing object for VX-REXX
+        
+        The VRPrinter object for VX-REXX gives you access to complex 
+        graphic printing functionality under VX-REXX. It is a VX-REXX
+        object developed using the ODK from WATCOM inc. and SOM-1. It
+        is automatically installed on the VX-REXX tooolbar. The VRPrinter 
+        object is fully enabled for drag drop programming and will 
+        install a set of programming macros in your VX-REXX system 
+        directory.
+
+        With this printer object you will be able to create professional 
+        style reports and outputs for your VX-REXX programs with images, 
+        boxes and text that can be justified, right or left aligned 
+        or centred. Documents can use up to 30 different font faces. You 
+        can also create tables with or without running headers and with 
+        different styles for the header and the body of the table. The 
+        VRPrinter object allows you to define page headers and footers 
+        and gives you access to a list of the printers connected to your 
+        work-station with their Job Properties and Font dialogs.
+
+        The VRPrinter object is shareware and can be registered through the 
+        Shareware Registration database GO SWREG reg No 6200. If you have 
+        registered any of the other ADD Consulting Printing libraries you 
+        can register for the upgrade price(reg No 6330).
+        
+        If you need similar functionality for other REXX development 
+        environments, download PRTGRAPH from the OS/2 Shareware library.
+        A C/C++ version, PRTGRAFC is also available for download from 
+        the same library.
+        
+        What's new in Version 2.1
+        
+        In Version 2.0 a progress dialog is shown during printing and 
+        the following methods have been added:
+        
+            o MoveX
+            o MoveY
+            o PrintWinImage
+
+
+        ADD Consulting (CH)                              1996.01.01
+

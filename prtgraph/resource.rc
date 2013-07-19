@@ -1,0 +1,50 @@
+/* Version of 96/03/23 by Peter Kanis */
+/************************************************************************
+*  Project     : VRPRINT                  Date    : 96/03/23            *
+*  Module      : RESOURCE DLL                                           *
+*  Filename    : resource.rc              Author  : Peter Kanis         *
+*************************************************************************
+*                                                                       *
+*  Description:                                                         *
+*                                                                       *
+*  Export:                                                              *
+*                                                                       *
+*  Internal:                                                            *
+*                                                                       *
+*  Locals:      none                                                    *
+*                                                                       *
+*  Revisions:   none                                                    *
+*                                                                       *
+*************************************************************************
+*                                                                       *
+*  (c) ADD Consulting  All Rights Reserved                              *
+*                                                                       *
+*************************************************************************/
+
+BITMAP 100 T:\vxodk\projects\VRPrint\demo\addlogo.bmp
+BITMAP 101 c:\os2\bitmap\BLUJEAN.BMP
+BITMAP 102 c:\os2\bitmap\BOX.BMP
+BITMAP 103 c:\os2\bitmap\BRICK.BMP
+BITMAP 104 c:\os2\bitmap\BUTTERFL.BMP
+BITMAP 105 c:\os2\bitmap\COLUMNS.BMP
+BITMAP 106 c:\os2\bitmap\DELFT.BMP
+BITMAP 107 c:\os2\bitmap\FERNS.BMP
+BITMAP 108 c:\os2\bitmap\FLAMINGO.BMP
+BITMAP 109 c:\os2\bitmap\FLEUR.BMP
+BITMAP 110 c:\os2\bitmap\LEAVES.BMP
+BITMAP 111 c:\os2\bitmap\MAZE.BMP
+BITMAP 112 c:\os2\bitmap\ORCHIDS.BMP
+BITMAP 113 c:\os2\bitmap\OS2TILE.BMP
+BITMAP 114 c:\os2\bitmap\SHELLS.BMP
+BITMAP 115 c:\os2\bitmap\SUNFLOW.BMP
+BITMAP 116 c:\os2\bitmap\SWIRLS.BMP
+BITMAP 117 c:\os2\bitmap\TIEDYE.BMP
+BITMAP 118 c:\os2\bitmap\ZIGZAG.BMP
+
+/************************************************************************/
+/*                                                                      */
+/*                         (c) ADD Consulting 1995                      */
+/*                                                                      */
+/*                               END OF FILE.                           */
+/*                                                                      */
+/************************************************************************/

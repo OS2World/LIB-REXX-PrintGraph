@@ -1,0 +1,98 @@
+; *********************************************************************
+; 
+;  $Author:   KANIS  $
+;  $Workfile:   PRTGRAFC.DEF  $
+;  $Revision:   1.0  $
+;  $Date:   04 May 1996 21:10:26  $
+; 
+;  $Log:   M:\prtgraph\prtgrafc.dev  $
+; 
+;    Rev 1.0   04 May 1996 21:10:26   KANIS
+; First VCS store for v2.2
+;  
+; *********************************************************************
+
+LIBRARY PRTGRAFC INITINSTANCE TERMINSTANCE
+PROTMODE
+
+DESCRIPTION     'V2.1 prtgrafc.dll (c) Copyright 1996 ADD Consulting'
+DATA            LOADONCALL MULTIPLE NONSHARED
+
+EXPORTS         
+        PrtGPrinterList
+        PrtGJobProps
+        PrtGJobProperties = PrtGJobProps
+        PrtGOpenPrintJob
+        PrtGAbortPrintJob
+        PrtGWriteln
+        PrtGWrite
+        PrtGPrintLine = PrtGWriteln
+        PrtGPrintLeft = PrtGWrite
+        PrtGBox
+        PrtGBoxColor
+        PrtGPrintBox = PrtGBoxColor
+        PrtGTab
+        PrtGGoto
+        PrtGStartTable
+        PrtGStartRow
+        PrtGStartCol
+        PrtGEndRow
+        PrtGEndTable
+        PrtGNewPage
+        PrtGClosePrintJob
+        PrtGJustRight
+        PrtGCentre
+        PrtGJustified
+        PrtGPrintRight = PrtGJustRight
+        PrtGPrintCentered = PrtGCentre
+        PrtGPrintJustified = PrtGJustified
+        PrtGSetMargins
+        PrtGSetHeader
+        PrtGSetLineSpace
+        PrtGSetPrintColors
+        PrtGInit
+        PrtGTerm
+        PrtGVersion
+        PrtGSetFooter
+        PrtGBitMap
+        PrtGBitMapColor
+        PrtGPrintBitmap = PrtGBitMapColor
+        PrtGGetPageSize
+        PrtGSetPrinter
+        PrtGPrinterDlg
+        PrtGFontDlg
+        PrtGPrinterDialog = PrtGPrinterDlg
+        PrtGFontDialog = PrtGFontDlg
+        PrtGDefineTable
+        PrtGDefineHeader
+        PrtGDefineFooter
+        PrtGDefineTableColors
+        PrtGDefineHdrColors
+        PrtGDefineFtrColors
+        PrtGAddHeaderLine
+        PrtGSetHdrLineFont
+        PrtGSetHeaderLineFont = PrtGSetHdrLineFont
+        PrtGAddColumn
+        PrtGDestroyHdrDef
+        PrtGDestroyFtrDef
+        PrtGDestroyTblDef
+        PrtGCurrentPrinter
+        PrtGResetColHeader
+        PrtGSetDlgButtonTexts
+        PrtGSet
+        PrtGGet
+        PrtGBlockFits
+        PrtGLineFits
+        PrtGPrintFile
+        PrtGPrintWinImage
+        PrtGMoveX
+        PrtGMoveY
+
+; ***********************************************************************
+;
+;   (c)1996 ADD Consulting
+;
+;   END OF FILE.
+;
+; ***********************************************************************
+        

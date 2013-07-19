@@ -1,0 +1,56 @@
+usage: sc [-C:D:E:I:S:VU:cd:hi:m:prsvw] f1 f2 ...
+Where:
+	-C <n>            - size of comment buffer (default: 49152)
+	-D <DEFINE>       - same as -D option for cpp.
+	-E <var>=<value>  - set environment variable.
+	-I <INCLUDE>      - same as -I option for cpp.
+	-S <n>            - size of string buffer (default: 49152)
+	-U <UNDEFINE>     - same as -U option for cpp.
+	-V                - show version number of compiler.
+	-c                - ignore all comments.
+	-d <dir>          - output directory for each emitted file.
+	-h                - this message.
+	-i <file>         - use this file name as supplied.
+	-m <name[=value]> - add global modifier.
+	-p                - shorthand for -D__PRIVATE__.
+	-r                - check releaseorder entries exist (default: FALSE).
+	-s <string>       - replace SMEMIT variable with <string>
+	-u                - update interface repository.
+	-v                - verbose debugging mode (default: FALSE).
+	-w                - don't display warnings (default: FALSE).
+
+Modifiers:
+	addprefixes : adds `functionprefix' to method names in template file
+	[no]addstar : [no]add `*' to C bindings for interface references.
+	      corba : check the source for CORBA compliance.
+	        csc : force running of OIDL compiler.
+	 emitappend : append the emitted files at the end of existing file.
+	   noheader : don't add a header to the emitted file.
+	      noint : don't warn about "int" causing portability problems.
+	     nolock : don't lock the IR during update.
+	       nopp : don't run the source through the pre-processor.
+	       notc : don't use typecodes for emit information.
+	 nouseshort : don't generate short names for types.
+	  pp=<path> : specify a local pre-processor to use.
+	   tcconsts : generate CORBA TypeCode constants.
+
+Note: All command-line modifiers can be set in the environment
+by changing them to UPPERCASE and preappending "SM" to them.
+
+Environment Variables:
+	SMEMIT=[h;ih;c;xh;xih;xc;def;ir;pdl]
+		: emitters to run (default : h;ih).
+	SMINCLUDE=<dir1>[;<dir2>]+
+		: where to search for .idl and .efw files.
+	SMKNOWNEXTS=ext[;ext]+
+		: add headers to user written emitters.
+	SMTMP=<dir>
+		: directory to hold intermediate files.
+	SOMIR=<path>[;<path>]+
+		: list of IRs to search.
+
+
+Pragmas:
+	#pragma somemittypes on          : turn on emission of global types.
+	#pragma somemittypes off         : turn off emission of global types.
+	#pragma modifier <modifier stm>; : instead of modifier statement.

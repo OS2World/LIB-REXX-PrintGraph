@@ -1,0 +1,239 @@
+   M:\prtgraph\prtrxdae.c_v Rev 1.0 (28 Sep 1996 13:07:48)
+           D:\PRTGRAPH\prtrxdae.c (02 Oct 1996 10:15:22)
+===================
++              1  |/***********************************************************************
++              2  |** 
++              3  |** $Author:   KANIS  $
++              4  |** $Workfile:   prtrxdae.c  $
++              5  |** $Revision:   1.0  $
++              6  |** $Date:   28 Sep 1996 13:07:48  $
++              7  |** 
++              8  |** $Log:   M:\prtgraph\prtrxdae.c_v  $
+-      1          |// *********************************************************************
+-      2          |//
+-      3          |// $Author:   KANIS  $
+-      4          |// $Workfile:   prtrxdae.c  $
+-      5          |// $Revision:   1.0  $
+-      6          |// $Date:   28 Sep 1996 13:07:48  $
+-      7          |//
+-      8          |// $Log:   M:\prtgraph\prtrxdae.c_v  $
+===================
++             12  |** 
++             13  |** ********************************************************************/
+-     12          |//
+-     13          |//    Rev 1.0   04 May 1996 21:09:40   KANIS
+-     14          |// First VCS store for v2.2
+-     15          |//
+-     16          |// *********************************************************************
+===================
++             33  |#define VER_NUM     "2.2a"
+-     36          |#define VER_NUM     "2.2"
+===================
++             67  |/*    
+===================
++             74  |*/
+===================
++            216  |    { 
++            217  |            LONG    idx = ( LONG)mp1;
++            218  |            BOOL    external = TRUE;
+> (   70)    219  |
++            220  |            if( idx < 0L)
++            221  |                idx = pShrMem->prt_idx;
++            222  |            else
++            223  |                external = FALSE;
+> (   77)    224  |
++            225  |WinAlarm( HWND_DESKTOP, WA_ERROR);
++            226  |
++            227  |            DosRequestMutexSem( pPrtList.hmtx, SEM_INDEFINITE_WAIT);
+===================
+-    224          |                                      pPrtList.aDevStruct[ pShrMem->prt_idx].pdriv,
+-    225          |                                      pPrtList.aDevStruct[ pShrMem->prt_idx].pszDriverName,
+-    226          |                                      pPrtList.aDevStruct[ pShrMem->prt_idx].pdriv->szDeviceName,
+-    227          |                                      pPrtList.aDevStruct[ pShrMem->prt_idx].pszLogAddress,
+<    228  (  705) |                                      DPDM_POSTJOBPROP);
+> (  502)    233  |                                            pPrtList.aDevStruct[ idx].pdriv,
+> (  503)    234  |                                            pPrtList.aDevStruct[ idx].pszDriverName,
+> (  504)    235  |                                            pPrtList.aDevStruct[ idx].pdriv->szDeviceName,
+> (  505)    236  |                                            pPrtList.aDevStruct[ idx].pszLogAddress,
+> (  506)    237  |                                      DPDM_POSTJOBPROP);
++            238  |
++            239  |            DosReleaseMutexSem( pPrtList.hmtx);
+===================
++            243  |                    memcpy( &( pShrMem->drvData), pPrtList.aDevStruct[ idx].pdriv,
++            244  |                            pPrtList.aDevStruct[ idx].pdriv->cb);
+-    232          |                memcpy( &( pShrMem->drvData), pPrtList.aDevStruct[ pShrMem->prt_idx].pdriv,
+-    233          |                            pPrtList.aDevStruct[ pShrMem->prt_idx].pdriv->cb);
+===================
++            247  |            if( external)
++            248  |    { 
+===================
++            251  |        }
+     238     252  |            return( 0L);
++            253  |        }
+===================
+-    241          |            WinDlgBox( HWND_DESKTOP,
+> (  481)    256  |
++            257  |            WinLoadDlg( HWND_DESKTOP,
+===================
++            336  |                           HWND_DESKTOP, 
+-    322          |                       hwnd,
+===================
+> (  386)    402  |    SWP             swp;
+===================
++            412  |            DosRequestMutexSem( pPrtList.hmtx, SEM_INDEFINITE_WAIT);
+===================
++            419  |            DosReleaseMutexSem( pPrtList.hmtx);
+===================
++            443  |            DosRequestMutexSem( pPrtList.hmtx, SEM_INDEFINITE_WAIT);
+-    429          |                idx = ( SHORT)WinSendDlgItemMsg( hwnd,
+> (  398)    444  |
++            445  |                idx =  SHORT1FROMMR( WinSendDlgItemMsg( hwnd,
+===================
++            448  |                                                       0L, 0L));
+-    432          |                                                 0L,0L);
+> (  405)    449  |
+===================
+-    441          |                    memset( &( pShrMem->drvData), 0, sizeof( DRVD));
+===================
++            460  |                    WinSendDlgItemMsg( hwnd,
++            461  |                                                 PRT_DLG_PRT_LST,
+> (  477)    462  |                                             LM_QUERYITEMTEXT,
+> (  478)    463  |                                             MPFROM2SHORT( idx, 127),
+> (  479)    464  |                                             MPFROMP( pShrMem->szPrtDlgRet));
+> (  480)    465  |        }
++            466  |            DosReleaseMutexSem( pPrtList.hmtx);
+> (  482)    467  |                WinDismissDlg( hwnd, 0);
+> (  247)    468  |        DosPostEventSem( HevShr);
+> (  248)    469  |            WinSetFocus( HWND_DESKTOP, pShrMem->hwndProg);
+===================
++            480  |            DosRequestMutexSem( pPrtList.hmtx, SEM_INDEFINITE_WAIT);
++            481  |                    idx = SHORT1FROMMR( WinSendDlgItemMsg( hwnd,
+-    460          |                idx = ( SHORT)WinSendDlgItemMsg( hwnd,
+===================
++            484  |                                                       0L, 0L));
+-    463          |                                                 0L,0L);
+===================
+-    473          |                    memset( &( pShrMem->drvData), 0, sizeof( DRVD));
+===================
+-    476          |            WinSendDlgItemMsg( hwnd, PRT_DLG_PRT_LST,
+> (  444)    495  |            WinSendDlgItemMsg( hwnd, PRT_DLG_PRT_LST,
+> (  445)    496  |                                             LM_QUERYITEMTEXT,
+> (  446)    497  |                                             MPFROM2SHORT( idx, 127),
+> (  447)    498  |                                             MPFROMP( pShrMem->szPrtDlgRet));
+> (  448)    499  |        }
++            500  |            DosReleaseMutexSem( pPrtList.hmtx);
+> (  449)    501  |                WinDismissDlg( hwnd, 0);
++            502  |        DosPostEventSem( HevShr);
++            503  |            WinSetFocus( HWND_DESKTOP, pShrMem->hwndProg);
+===================
++            509  |        DosPostEventSem( HevShr);
++            510  |            WinSetFocus( HWND_DESKTOP, pShrMem->hwndProg);
+===================
++            514  |                    idx = SHORT1FROMMR( WinSendDlgItemMsg( hwnd,
+-    491          |                idx = ( SHORT)WinSendDlgItemMsg( hwnd,
+===================
++            517  |                                                       0L, 0L));
+-    494          |                                                 0L,0L);
+===================
++            520  |                        WinPostMsg( pShrMem->hwnd, WM_JOBDLG, MPFROMSHORT( idx), 0L);
+<    497  (  696) |
+-    498          |            /* display job properties dialog and get updated */
+-    499          |            /* job properties from driver */
+<    500  (  698) |
+-    501          |                        DevPostDeviceModes( hab,
+===================
++            630  |    LONG            buflen, 
++            631  |                    devrc;
+> (  464)    632  |
++            633  |            DosRequestMutexSem( pPrtList.hmtx, SEM_INDEFINITE_WAIT);
+===================
+-    623          |        if( pPrtList.szPrinterList[ i])
+===================
+-    649          |                if ( pPrtList.aDevStruct[ cnt].pszLogAddress)
+     650     665  |                    FREE( pPrtList.aDevStruct[ cnt].pszLogAddress);
+-    651          |                if ( pPrtList.aDevStruct[ cnt].pszDriverName)
+     652     666  |                    FREE( pPrtList.aDevStruct[ cnt].pszDriverName);
+-    653          |                if ( pPrtList.aDevStruct[ cnt].pdriv)
+     654     667  |                    FREE( pPrtList.aDevStruct[ cnt].pdriv);
+-    655          |                if ( pPrtList.aDevStruct[ cnt].pszDataType)
+===================
++            682  |                pPrtList.aDevStruct[ i].pszLogAddress = strdup( prq->pszName);
+-    671          |                pPrtList.aDevStruct[ i].pszLogAddress = (PSZ) malloc( strlen( prq->pszName) + 1);
+-    672          |                strcpy( pPrtList.aDevStruct[ i].pszLogAddress, prq->pszName);
+===================
++            692  |                pPrtList.aDevStruct[ i].pszDriverName = strdup( prq->pszDriverName);
+-    682          |                pPrtList.aDevStruct[ i].pszDriverName = ( PSZ) malloc( strlen( prq->pszDriverName) + 1);
+-    683          |                strcpy( pPrtList.aDevStruct[ i].pszDriverName, prq->pszDriverName);
+===================
++            695  |                pPrtList.aDevStruct[ i].pszDataType = strdup( "PM_Q_STD");
+-    686          |                pPrtList.aDevStruct[ i].pszDataType = ( PSZ) malloc( 32);
+-    687          |                strcpy( pPrtList.aDevStruct[ i].pszDataType, "PM_Q_STD");
+> (  497)    696  |
++            697  |                pPrtList.szPrinterList[ i] = strdup( prq->pszComment);
+> (  500)    698  |
+> (  593)    699  |
++            700  |                buflen = DevPostDeviceModes( hab,
++            701  |                                         NULL, 
++            702  |                                             pPrtList.aDevStruct[ i].pszDriverName,
++            703  |                                             prq->pDriverData->szDeviceName,
++            704  |                                             pPrtList.aDevStruct[ i].pszLogAddress,
+> (  228)    705  |                                      DPDM_POSTJOBPROP);
+> (  657)    706  |
++            707  |                if( buflen <= 0)
++            708  |    { 
++            709  |                    char str[ 128];
+     688     710  |
++            711  |                    sprintf( str, "Error getting driver data for %s", prq->pszComment);
++            712  |                    WinMessageBox( HWND_DESKTOP, HWND_DESKTOP,
++            713  |                                   str, "ERROR", 0, MB_CANCEL | MB_MOVEABLE | MB_ERROR);
++            714  |        FREE( pbuffer);
++            715  |            DosReleaseMutexSem( pPrtList.hmtx);
++            716  |                    WinPostMsg( pShrMem->hwnd, WM_QUIT, 0L, 0L);
++            717  |        return;
++            718  |        }
+-    689          |                pPrtList.szPrinterList[ i] = ( PSZ) malloc( strlen( prq->pszComment) + 1);
+-    690          |                strcpy( pPrtList.szPrinterList[ i], prq->pszComment);
+     691     719  |
++            720  |                pPrtList.aDevStruct[ i].pdriv = ( PDRIVDATA) malloc( buflen);
++            721  |//                memcpy( pPrtList.aDevStruct[ i].pdriv, prq->pDriverData, prq->pDriverData->cb);
++            722  |
++            723  |                devrc = DevPostDeviceModes( hab,
++            724  |                                            pPrtList.aDevStruct[ i].pdriv,
++            725  |                                             pPrtList.aDevStruct[ i].pszDriverName,
++            726  |                                             prq->pDriverData->szDeviceName,
++            727  |                                             pPrtList.aDevStruct[ i].pszLogAddress,
++            728  |                                            DPDM_QUERYJOBPROP);
++            729  |
++            730  |                if( devrc != DEV_OK)
++            731  |    { 
++            732  |                    char str[ 128];
++            733  |
++            734  |                    sprintf( str, "Error getting driver data for %s", prq->pszComment);
++            735  |                    WinMessageBox( HWND_DESKTOP, HWND_DESKTOP,
++            736  |                                   str, "ERROR", 0, MB_CANCEL | MB_MOVEABLE | MB_ERROR);
++            737  |        FREE( pbuffer);
++            738  |            DosReleaseMutexSem( pPrtList.hmtx);
++            739  |                    WinPostMsg( pShrMem->hwnd, WM_QUIT, 0L, 0L);
++            740  |        return;
++            741  |        }
+-    692          |                pPrtList.aDevStruct[ i].pdriv = ( PDRIVDATA) malloc((size_t) prq->pDriverData->cb);
+-    693          |                memcpy( pPrtList.aDevStruct[ i].pdriv, prq->pDriverData, prq->pDriverData->cb);
+===================
++            759  |
++            760  |            DosReleaseMutexSem( pPrtList.hmtx);
+===================
++            764  |/*************************************************************************
++            765  |** 
++            766  |**  (c)1996 ADD Consulting
++            767  |** 
++            768  |**  END OF FILE.
++            769  |** 
++            770  |*************************************************************************/
+-    714          |// ***********************************************************************
+-    715          |//
+-    716          |//  (c)1996 ADD Consulting
+-    717          |//
+-    718          |//  END OF FILE.
+-    719          |//
+-    720          |// ***********************************************************************
+===================

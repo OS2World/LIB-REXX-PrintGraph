@@ -1,0 +1,27 @@
+Compiling OS2\prtgraph.obj...
+	icc -DNDEBUG -DREXX_MOD -DOS2 -C -Q -G5 -Gm -Gd -Se -Ss -W3 -N40 -Gd-  -FoOS2\ -Ge- -O -Weff+par+rea+use+ prtgraph.c
+prtgraph.c(2699:5) : informational EDC0491: The automatic variable 'bitcount' is set but never referenced.
+prtgraph.c(2699:5) : informational EDC0491: The automatic variable 'planes' is set but never referenced.
+linking prtgraph.dll
+	icc -Q -B"/DLL /NOE" -Fe"prtgraph.dll" OS2\prtgraph.obj OS2\prtgrexx.obj OS2\varpool.obj OS2\initterm.obj rexx.lib prtgraph.def
+Binding resources to prtgraph.dll...
+	rc prtgraph.res prtgraph.dll
+Operating System/2 Resource Compiler
+Version 3.00.011 May 30 1995
+(C) Copyright IBM Corporation 1988-1995
+(C) Copyright Microsoft Corp. 1985-1995
+All rights reserved.
+
+
+Reading binary resource file prtgraph.res
+
+....
+Writing resources to OS/2 v2.0 Linear .EXE file
+Writing 1 DEMAND resource object(s)
+  Writing:  636 bytes in 1 page(s)
+    200.4 (201 bytes)
+    300.4 (228 bytes)
+    400.4 (191 bytes)
+    1.11 (10 bytes)
+
+[[REXX Dll is up to date]]

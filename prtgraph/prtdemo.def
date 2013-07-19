@@ -1,0 +1,30 @@
+; *********************************************************************
+; 
+;  $Author:   KANIS  $
+;  $Workfile:   PRTDEMO.DEF  $
+;  $Revision:   1.0  $
+;  $Date:   04 May 1996 21:10:24  $
+; 
+;  $Log:   M:\prtgraph\prtdemo.dev  $
+; 
+;    Rev 1.0   04 May 1996 21:10:24   KANIS
+; First VCS store for v2.2
+;  
+; *********************************************************************
+
+NAME            PRTDEMO   WINDOWAPI NEWFILES
+
+DESCRIPTION     'Demo program for PRTGRAFC DLL by Peter J. Kanis (c)1995 ADD Consulting'
+PROTMODE
+HEAPSIZE        8192
+STACKSIZE       0x30000
+
+
+; ***********************************************************************
+;
+;   (c)1996 ADD Consulting
+;
+;   END OF FILE.
+;
+; ***********************************************************************
+IMPORTS         AddProductInfoDlg = ADDPROD.1
